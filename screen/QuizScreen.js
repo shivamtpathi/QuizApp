@@ -74,11 +74,11 @@ nexthandler()
 } 
 
 
-
+//  console.log(questions[num])
 
   return (
     <View style={{height: '100%'}}>
-      {questions &&  (
+      {questions ?  (
         <View style={quizscreenstyles.container}>
           <View style={quizscreenstyles.questins}>
             <Text style={quizscreenstyles.text}>Q{num+1}.{" "}{decodeURIComponent(questions[num].question)}</Text>
@@ -150,7 +150,7 @@ nexthandler()
             </TouchableOpacity>}
           </View>
         </View>
-      ) }
+      ) : <Text>please check your internet connection</Text> }
     </View>
   );
 };
